@@ -1,3 +1,4 @@
+import numpy as np 
 class data_preprocessing:
 
     def normalize(x):
