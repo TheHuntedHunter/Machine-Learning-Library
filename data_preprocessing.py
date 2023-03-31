@@ -4,7 +4,9 @@ class data_preprocessing:
         min_val = np.min(x, axis=0)
         max_val = np.max(x, axis=0)
         ranges = max_val - min_val 
-
+        
+        ranges[ranges == 0] = 1 
+       
         normalized_data = (x - min_val) / ranges
         return normalized_data
 
