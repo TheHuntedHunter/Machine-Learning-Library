@@ -21,7 +21,7 @@ class gradient_descent:
         return w,b
 
     #gradient_descent with momentum and regularization. 
-    def gradient_descent_momentum(x, y, a = 0.01, e = 10000, l = 0.7, beta = 0.9):
+    def gradient_descent_momentum(x, y, a = 0.01, t = 10000, l = 0.7, beta = 0.9):
 
         w = np.zeros((x.shape[1],1))
         b = 0
@@ -30,7 +30,7 @@ class gradient_descent:
         v_w = 0 
         v_b = 0 
         
-        for i in range(e):
+        for i in range(t):
             h = x @ w + b 
             error = h - y 
             dw = (1/m)* (x.T @ error)
